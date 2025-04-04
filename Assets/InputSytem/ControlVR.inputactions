@@ -1,0 +1,106 @@
+{
+    "name": "ControlVR",
+    "maps": [
+        {
+            "name": "ControlTAC",
+            "id": "f9da6590-1b39-4a6e-aeed-04dec5e63db2",
+            "actions": [
+                {
+                    "name": "ApareceTexto",
+                    "type": "Button",
+                    "id": "e757496c-6cff-46a0-9409-b38864828674",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BotonAccion",
+                    "type": "Button",
+                    "id": "8dd01c4b-612e-41b0-ab34-1f00ec1b780f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Caminar",
+                    "type": "Value",
+                    "id": "83f9a466-fd66-47fa-bc34-2d8ef54fb8a0",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "BotonAccionUI",
+                    "type": "Button",
+                    "id": "c9928654-6cb5-4ee6-af64-aadad5dc3176",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0b513d3d-2754-4a99-bf8d-8e3b289e7ef7",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "ControlVR",
+                    "action": "BotonAccion",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "92590443-9a8b-4513-9cfb-7dade19548ab",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "ControlVR",
+                    "action": "Caminar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "105f700c-8d95-4aef-8d8b-63e36c386db1",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ApareceTexto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ee205393-3855-4265-834b-c428bb307177",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "ControlVR",
+                    "action": "BotonAccionUI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "ControlVR",
+            "bindingGroup": "ControlVR",
+            "devices": [
+                {
+                    "devicePath": "<AndroidGamepad>/{Hatswitch}",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
