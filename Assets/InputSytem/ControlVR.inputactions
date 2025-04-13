@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "BotonCuestionario",
+                    "type": "Button",
+                    "id": "e807c700-0b97-4683-a4c1-49cf12c7e72c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -84,6 +93,17 @@
                     "processors": "",
                     "groups": "ControlVR",
                     "action": "BotonAccionUI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c369e78a-c80e-4fcf-97f9-14de258776ed",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "ControlVR",
+                    "action": "BotonCuestionario",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

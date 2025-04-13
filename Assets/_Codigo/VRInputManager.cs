@@ -4,7 +4,7 @@ using TMPro; // Necesario para manejar el texto
 
 public class VRInputManager : MonoBehaviour
 {
-    [SerializeField] InputActionReference buttonAction; 
+    [SerializeField] InputActionReference buttonAction;
     [SerializeField] GameObject textObject; 
     AgarrarObjeto objeto;
 

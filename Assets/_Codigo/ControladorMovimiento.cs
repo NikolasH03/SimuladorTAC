@@ -5,6 +5,8 @@ public class ControladorMovimiento : MonoBehaviour
 {
     [SerializeField] InputActionReference AccionMoverse;
     [SerializeField] Transform cameraTransform;
+    private Rigidbody rb;
+
     [SerializeField] float speed = 5f;
 
     private Vector2 InputMovimiento;
@@ -33,32 +35,35 @@ public class ControladorMovimiento : MonoBehaviour
         InputMovimiento = Vector2.zero; 
     }
 
-    void Update()
+    private void Start()
     {
+        rb = GetComponent<Rigidbody>();
+    }
 
+    private void FixedUpdate()
+    {
         if (cameraTransform == null) return;
 
         Vector3 forward = cameraTransform.forward;
-        forward.y = 0; 
+        forward.y = 0;
         forward.Normalize();
 
         Vector3 right = cameraTransform.right;
-        right.y = 0; 
+        right.y = 0;
         right.Normalize();
 
-
-        if (InputMovimiento==Vector2.zero)
+        if (InputMovimiento == Vector2.zero)
         {
             ControladorSonido.instance.stopFootstep();
         }
         else
         {
             ControladorSonido.instance.playFootstep();
-
         }
 
-        Vector3 move = (forward * InputMovimiento.y + right * InputMovimiento.x) * speed * Time.deltaTime;
-        transform.Translate(move, Space.World);
+        Vector3 direction = forward * InputMovimiento.y + right * InputMovimiento.x;
+        Vector3 move = direction.normalized * speed * Time.deltaTime;
+        rb.MovePosition(rb.position + move);
     }
 }
 

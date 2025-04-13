@@ -62,7 +62,7 @@ public class ControladorBotonTAC : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(" MiDebug : IsPlaying"+isPlaying);
-        Debug.Log(" MiDebug : Reanudar" + Reanudar);
+        //Debug.Log(" MiDebug : IsPlaying"+isPlaying);
+        //Debug.Log(" MiDebug : Reanudar" + Reanudar);
     }
 }

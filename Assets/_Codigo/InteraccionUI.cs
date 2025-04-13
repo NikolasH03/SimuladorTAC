@@ -8,8 +8,12 @@ public class InteraccionUI : MonoBehaviour
 {
     [SerializeField] InputActionReference BotonAccion;
     [SerializeField] bool oprimioBoton=false;
-    [SerializeField] GameObject medico;
+    [SerializeField] GameObject original;
+    [SerializeField] GameObject lateral;
+    [SerializeField] GameObject supino;
+    [SerializeField] GameObject prono;
     [SerializeField] bool EstaViendoObjeto = false;
+    [SerializeField] string tipoPosicion;
     void OnEnable()
     {
         BotonAccion.action.Enable();
@@ -30,7 +34,15 @@ public class InteraccionUI : MonoBehaviour
 
     void OprimeBoton(InputAction.CallbackContext context)
     {
-        oprimioBoton = !oprimioBoton;
+        if (EstaViendoObjeto)
+        {
+            oprimioBoton = !oprimioBoton;
+        }
+        else
+        {
+            oprimioBoton = false;
+        }
+        
     }
     void Update()
     {
@@ -38,21 +50,36 @@ public class InteraccionUI : MonoBehaviour
         {
             if (oprimioBoton)
             {
-                ApareceMedico();
+                UbicarPaciente();
             }
         }
 
     }
 
-    public void ApareceMedico()
+    public void UbicarPaciente()
     {
-        if (medico.activeSelf)
+        if (tipoPosicion== "Supino")
         {
-            medico.SetActive(false);
+            original.SetActive(false);
+            prono.SetActive(false);
+            lateral.SetActive(false);
+            supino.SetActive(true);
         }
-        else
+        else if( tipoPosicion== "Prono")
         {
-            medico.SetActive(true);
+            original.SetActive(false);
+            supino.SetActive(false);
+            lateral.SetActive(false);
+            prono.SetActive(true);
         }
+        else if (tipoPosicion == "Lateral")
+        {
+            original.SetActive(false);
+            supino.SetActive(false);
+            prono.SetActive(false);
+            lateral.SetActive(true);
+
+        }
+        oprimioBoton = false;
     } 
 }

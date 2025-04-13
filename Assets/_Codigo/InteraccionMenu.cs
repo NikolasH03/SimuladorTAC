@@ -39,7 +39,7 @@ public class InteraccionMenu : MonoBehaviour
         {
             if (oprimioBoton)
             {
-                Debug.Log(" MiDebug : si oprimio boton");
+                //Debug.Log(" MiDebug : si oprimio boton");
                 if (tipoBoton == 1)
                 {
                     ComenzarSimulacion();
@@ -54,7 +54,7 @@ public class InteraccionMenu : MonoBehaviour
     }
     public void ComenzarSimulacion()
     {
-        Debug.Log(" MiDebug : si intenta cargar la escena");
+        //Debug.Log(" MiDebug : si intenta cargar la escena");
         SceneManager.LoadScene("SalaTAC");
     }
     public void Salir()
