@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12e4639fe5f571247b5ffed4915fc5d2, type: 3}
+  m_Name: Paciente1
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  Nombre: Carlos
+  edad: "14 a\xF1os"
+  altura: 1.8 metros
+  peso: 68 kg
+  postura: 1
+  region: 1
+  examenCabeza: 2
+  examenTorax: 0
+  examenPelvis: 2

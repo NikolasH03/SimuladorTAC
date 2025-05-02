@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro; // Necesario para manejar el texto
+using TMPro; 
 
-public class VRInputManager : MonoBehaviour
+public class MostrarFichaTecnica : MonoBehaviour
 {
     [SerializeField] InputActionReference buttonAction;
     [SerializeField] GameObject textObject; 
