@@ -4,16 +4,23 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class InteraccionUI : MonoBehaviour
+public class PosturaManager : MonoBehaviour
 {
     [SerializeField] InputActionReference BotonAccion;
     [SerializeField] bool oprimioBoton=false;
+    [SerializeField] bool EstaViendoObjeto = false;
+
     [SerializeField] GameObject original;
     [SerializeField] GameObject lateral;
     [SerializeField] GameObject supino;
     [SerializeField] GameObject prono;
-    [SerializeField] bool EstaViendoObjeto = false;
+    [SerializeField] GameObject camilla;
+    [SerializeField] GameObject npc;
+    
+
     [SerializeField] string tipoPosicion;
+    
+
     void OnEnable()
     {
         BotonAccion.action.Enable();
@@ -58,19 +65,32 @@ public class InteraccionUI : MonoBehaviour
 
     public void UbicarPaciente()
     {
-        if (tipoPosicion== "Supino")
+        if (tipoPosicion == "Supino")
         {
             original.SetActive(false);
             prono.SetActive(false);
             lateral.SetActive(false);
             supino.SetActive(true);
+            npc.transform.SetParent(camilla.transform);
+            TACManager.instance.setPacienteEnCamilla(true);
+            if (tipoPosicion == PacienteManager.instance.getPosturaPaciente())
+            {
+                TACManager.instance.setPostura(true);
+            }
         }
-        else if( tipoPosicion== "Prono")
+        else if (tipoPosicion == "Prono")
         {
             original.SetActive(false);
             supino.SetActive(false);
             lateral.SetActive(false);
             prono.SetActive(true);
+            npc.transform.SetParent(camilla.transform);
+            TACManager.instance.setPacienteEnCamilla(true);
+
+            if (tipoPosicion == PacienteManager.instance.getPosturaPaciente())
+            {
+                TACManager.instance.setPostura(true);
+            }
         }
         else if (tipoPosicion == "Lateral")
         {
@@ -78,8 +98,17 @@ public class InteraccionUI : MonoBehaviour
             supino.SetActive(false);
             prono.SetActive(false);
             lateral.SetActive(true);
+            npc.transform.SetParent(camilla.transform);
+            TACManager.instance.setPacienteEnCamilla(true);
+
+            if (tipoPosicion == PacienteManager.instance.getPosturaPaciente())
+            {
+                TACManager.instance.setPostura(true);
+            }
 
         }
         oprimioBoton = false;
-    } 
+    }
+    
+
 }

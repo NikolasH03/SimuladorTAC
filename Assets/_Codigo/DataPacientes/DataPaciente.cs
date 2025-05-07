@@ -4,9 +4,9 @@ using UnityEngine;
 
 public enum tipoPostura
 {
-    supino,
-    lateral,
-    prono
+    Supino,
+    Lateral,
+    Prono
 }
 public enum regionAnatomica
 {

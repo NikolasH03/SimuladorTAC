@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - UI
+  - Cabeza
+  - Pelvis
+  - Torax
+  - Seleccionable
+  - Verificar
   layers:
   - Default
   - TransparentFX
