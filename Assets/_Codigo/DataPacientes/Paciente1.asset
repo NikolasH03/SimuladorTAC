@@ -18,7 +18,7 @@ MonoBehaviour:
   altura: 1.8 metros
   peso: 68 kg
   postura: 1
-  region: 1
-  examenCabeza: 2
-  examenTorax: 0
-  examenPelvis: 2
+  region: 2
+  examenCabeza: 1
+  examenTorax: 2
+  examenPelvis: 0

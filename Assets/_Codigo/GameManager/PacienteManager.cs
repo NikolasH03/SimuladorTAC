@@ -39,6 +39,20 @@ public class PacienteManager : MonoBehaviour
     {
         return pacienteActual.region.ToString();
     }
+    public string GetExamenActual()
+    {
+        switch (pacienteActual.region)
+        {
+            case regionAnatomica.Cabeza:
+                return NombresEnum.GetInspectorName(pacienteActual.examenCabeza);
+            case regionAnatomica.Torax:
+                return NombresEnum.GetInspectorName(pacienteActual.examenTorax);
+            case regionAnatomica.Pelvis:
+                return NombresEnum.GetInspectorName(pacienteActual.examenPelvis);
+            default:
+                return "Desconocido";
+        }
+    }
     public string getNombre()
     {
         return pacienteActual.Nombre;

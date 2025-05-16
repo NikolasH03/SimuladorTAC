@@ -17,7 +17,9 @@ public class PantallaManager : MonoBehaviour
     [SerializeField] bool TodosCamposLlenos = false;
     [SerializeField] bool RegionAnatomicaCorrecta = false;
     [SerializeField] bool TipoExamenCorrecto = false;
-
+    [SerializeField] List<string> nombresExamenesCabeza = NombresEnum.GetAllInspectorNames<ExamenesCabeza>();
+    [SerializeField] List<string> nombresExamenesTorax = NombresEnum.GetAllInspectorNames<ExamenesTorax>();
+    [SerializeField] List<string> nombresExamenesPelvis = NombresEnum.GetAllInspectorNames<ExamenesPelvis>();
     private void Awake()
     {
         if (instance == null)
@@ -75,6 +77,14 @@ public class PantallaManager : MonoBehaviour
     {
         PosturaCorrecta = postura;
     }
+    public void setRegionCorrecta(bool region)
+    {
+        RegionAnatomicaCorrecta = region;
+    }
+    public void setExamen(bool region)
+    {
+        TipoExamenCorrecto = region;
+    }
     public void setCamposLlenos(bool campos)
     {
         TodosCamposLlenos = campos;
@@ -82,5 +92,21 @@ public class PantallaManager : MonoBehaviour
     public void setContinuar(bool continuar)
     {
         Continuar = continuar;
+    }
+    public List<string> getListaExamenes(string nombre)
+    {
+        if(nombre == "Cabeza")
+        {
+            return nombresExamenesCabeza;
+        }
+        else if (nombre == "Torax")
+        {
+            return nombresExamenesTorax;
+        }
+        else if (nombre == "Pelvis")
+        {
+            return nombresExamenesPelvis;
+        }
+        return null;
     }
 }

@@ -5,11 +5,13 @@ using UnityEngine;
 public class ControladorSonido : MonoBehaviour
 {
     [SerializeField] AudioSource musicSource;
-    //[SerializeField] AudioSource sfxSource;
+    [SerializeField] AudioSource sfxSource;
     [SerializeField] AudioSource footstepsSource;
 
     public AudioClip background;
     public AudioClip footsteps;
+    public AudioClip SonidoBoton;
+    public AudioClip SonidoTAC;
 
 
     public static ControladorSonido instance;
@@ -34,10 +36,10 @@ public class ControladorSonido : MonoBehaviour
         musicSource.Play();
 
     }
-    //public void playAudio(AudioClip clip)
-    //{
-    //    sfxSource.PlayOneShot(clip);
-    //}
+    public void playAudio(AudioClip clip)
+    {
+        sfxSource.PlayOneShot(clip);
+    }
     public void playFootstep()
     {
 
