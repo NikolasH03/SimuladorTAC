@@ -35,11 +35,13 @@ public class TriviaManager : MonoBehaviour
         {
             respuestasCorrectas++;
             correcto.SetActive(true);
+            ControladorSonido.instance.playAudio(ControladorSonido.instance.correcto);
             Debug.Log(" MiDebug ¡Correcto!");
         }
         else
         {
             incorrecto.SetActive(true);
+            ControladorSonido.instance.playAudio(ControladorSonido.instance.incorrecto);
             Debug.Log(" MiDebug Incorrecto.");
         }
 

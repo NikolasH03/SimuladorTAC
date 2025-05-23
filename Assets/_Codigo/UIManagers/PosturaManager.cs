@@ -36,6 +36,11 @@ public class PosturaManager : MonoBehaviour
     void SetEstaViendoObjeto(bool valor)
     {
         EstaViendoObjeto = valor;
+
+        if (EstaViendoObjeto)
+        {
+            ControladorSonido.instance.playAudio(ControladorSonido.instance.hover);
+        }
     }
 
     void OprimeBoton(InputAction.CallbackContext context)
@@ -75,9 +80,9 @@ public class PosturaManager : MonoBehaviour
             TACManager.instance.setPacienteEnCamilla(true);
             if (tipoPosicion == PacienteManager.instance.getPosturaPaciente())
             {
+                ControladorSonido.instance.playAudio(ControladorSonido.instance.correcto);
                 TACManager.instance.setPostura(true);
                 supino.transform.SetParent(camilla.transform, true);
-                Debug.Log(" Perra :el padre del modelo es: " +supino.transform.parent);
             }
         }
         else if (tipoPosicion == "Prono")
@@ -90,9 +95,9 @@ public class PosturaManager : MonoBehaviour
 
             if (tipoPosicion == PacienteManager.instance.getPosturaPaciente())
             {
+                ControladorSonido.instance.playAudio(ControladorSonido.instance.correcto);
                 TACManager.instance.setPostura(true);
                 prono.transform.SetParent(camilla.transform, true);
-                Debug.Log(" Perra :el padre del modelo es: " + prono.transform.parent);
             }
         }
         else if (tipoPosicion == "Lateral")
@@ -105,6 +110,7 @@ public class PosturaManager : MonoBehaviour
 
             if (tipoPosicion == PacienteManager.instance.getPosturaPaciente())
             {
+                ControladorSonido.instance.playAudio(ControladorSonido.instance.correcto);
                 TACManager.instance.setPostura(true);
                 lateral.transform.SetParent(camilla.transform, true);
                 

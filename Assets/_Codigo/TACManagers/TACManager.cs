@@ -47,6 +47,10 @@ public class TACManager : MonoBehaviour
     void SetEstaViendoObjeto(bool valor)
     {
         EstaViendoObjeto = valor;
+        if (EstaViendoObjeto)
+        {
+            ControladorSonido.instance.playAudio(ControladorSonido.instance.hover);
+        }
     }
     void OprimioBoton(InputAction.CallbackContext context)
     {
@@ -61,10 +65,12 @@ public class TACManager : MonoBehaviour
                     laseres.SetActive(true);
                     if (isPlaying && !Reanudar)
                     {
+                        ControladorSonido.instance.playAudio(ControladorSonido.instance.tac);
                         animator.speed = 1;
                     }
                     else if (isPlaying && Reanudar)
                     {
+                        ControladorSonido.instance.playAudio(ControladorSonido.instance.tac);
                         animator.speed = 1;
                         Reanudar = false;
                     }
@@ -98,14 +104,6 @@ public class TACManager : MonoBehaviour
     {
         animator.speed = 0;
         laseres.SetActive(false);
-        
-
-    }
-    void Update()
-    {
-        //Debug.Log(" MiDebug : IsPlaying"+isPlaying);
-        //Debug.Log(" MiDebug : Reanudar" + Reanudar);
-        
     }
 
     public void setPacienteEnCamilla(bool paciente)

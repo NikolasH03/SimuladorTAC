@@ -14,25 +14,49 @@ public class VerificadorGlobal : MonoBehaviour
     public void VerificarPostura(string nombreBoton)
     {
         if (nombreBoton == PacienteManager.instance.getPosturaPaciente())
+        {
             PantallaManager.instance.setPosturaCorrecta(true);
+            ControladorSonido.instance.playAudio(ControladorSonido.instance.correcto);
+        }
+
         else
+        {
             PantallaManager.instance.setPosturaCorrecta(false);
+            ControladorSonido.instance.playAudio(ControladorSonido.instance.incorrecto);
+        }
+            
     }
 
     public void VerificarRegion(string nombreBoton)
     {
         if (nombreBoton == PacienteManager.instance.getRegionAnatomica())
+        {
             PantallaManager.instance.setRegionCorrecta(true);
+            ControladorSonido.instance.playAudio(ControladorSonido.instance.correcto);
+        }
+
         else
+        {
             PantallaManager.instance.setRegionCorrecta(false);
+            ControladorSonido.instance.playAudio(ControladorSonido.instance.incorrecto);
+        }
+           
     }
 
     public void VerificarExamen(string texto)
     {
         if (texto == PacienteManager.instance.GetExamenActual())
+        {
             PantallaManager.instance.setExamen(true);
+            ControladorSonido.instance.playAudio(ControladorSonido.instance.correcto);
+        }
+
         else
+        {
             PantallaManager.instance.setExamen(false);
+            ControladorSonido.instance.playAudio(ControladorSonido.instance.incorrecto);
+        }
+            
     }
 
     public void ActualizarExamenes(string region, List<TMPro.TextMeshProUGUI> botones)

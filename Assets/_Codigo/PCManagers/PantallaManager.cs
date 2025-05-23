@@ -18,7 +18,6 @@ public class PantallaManager : MonoBehaviour
     [SerializeField] bool RegionAnatomicaCorrecta = false;
     [SerializeField] bool TipoExamenCorrecto = false;
     [SerializeField] int numeroCamposLlenos = 0;
-    //[SerializeField] List<TextMeshProUGUI> BotonesExamenes;
     [SerializeField] List<string> nombresExamenesCabeza = NombresEnum.GetAllInspectorNames<ExamenesCabeza>();
     [SerializeField] List<string> nombresExamenesTorax = NombresEnum.GetAllInspectorNames<ExamenesTorax>();
     [SerializeField] List<string> nombresExamenesPelvis = NombresEnum.GetAllInspectorNames<ExamenesPelvis>();
@@ -32,11 +31,6 @@ public class PantallaManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    public void Start()
-    {
-
     }
     public void Update()
     {
@@ -98,43 +92,6 @@ public class PantallaManager : MonoBehaviour
         }
 
     }
-    //public void ActualizarExamenesDisponibles(string region)
-    //{
-    //    if (region == "Cabeza")
-    //    {
-    //        List<string> nombres = getListaExamenes("Cabeza");
-
-    //        for (int i = 0; i < BotonesExamenes.Count; i++)
-    //        {
-
-    //            BotonesExamenes[i].text = nombres[i];
-
-    //        }
-    //    }
-    //    if (region == "Torax")
-    //    {
-    //        List<string> nombres = getListaExamenes("Torax");
-
-    //        for (int i = 0; i < BotonesExamenes.Count; i++)
-    //        {
-
-    //            BotonesExamenes[i].text = nombres[i];
-
-    //        }
-    //    }
-    //    if (region == "Pelvis")
-    //    {
-    //        List<string> nombres = getListaExamenes("Pelvis");
-
-    //        for (int i = 0; i < BotonesExamenes.Count; i++)
-    //        {
-
-    //            BotonesExamenes[i].text = nombres[i];
-
-    //        }
-    //    }
-    //}
-
     public void setPosturaCorrecta(bool postura)
     {
         PosturaCorrecta = postura;

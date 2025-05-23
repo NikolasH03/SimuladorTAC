@@ -29,6 +29,11 @@ public class BotonRespuesta : MonoBehaviour
     void SetEstaViendoObjeto(bool valor)
     {
         EstaViendoObjeto = valor;
+
+        if (EstaViendoObjeto) 
+        {
+            ControladorSonido.instance.playAudio(ControladorSonido.instance.hover);
+        }
     }
     void OprimeBoton(InputAction.CallbackContext context)
     {
