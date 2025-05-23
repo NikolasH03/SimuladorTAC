@@ -14,9 +14,8 @@ public class PosturaManager : MonoBehaviour
     [SerializeField] GameObject lateral;
     [SerializeField] GameObject supino;
     [SerializeField] GameObject prono;
+
     [SerializeField] GameObject camilla;
-    [SerializeField] GameObject npc;
-    
 
     [SerializeField] string tipoPosicion;
     
@@ -53,6 +52,7 @@ public class PosturaManager : MonoBehaviour
     }
     void Update()
     {
+
         if (EstaViendoObjeto)
         {
             if (oprimioBoton)
@@ -60,6 +60,7 @@ public class PosturaManager : MonoBehaviour
                 UbicarPaciente();
             }
         }
+        
 
     }
 
@@ -71,11 +72,12 @@ public class PosturaManager : MonoBehaviour
             prono.SetActive(false);
             lateral.SetActive(false);
             supino.SetActive(true);
-            npc.transform.SetParent(camilla.transform);
             TACManager.instance.setPacienteEnCamilla(true);
             if (tipoPosicion == PacienteManager.instance.getPosturaPaciente())
             {
                 TACManager.instance.setPostura(true);
+                supino.transform.SetParent(camilla.transform, true);
+                Debug.Log(" Perra :el padre del modelo es: " +supino.transform.parent);
             }
         }
         else if (tipoPosicion == "Prono")
@@ -84,12 +86,13 @@ public class PosturaManager : MonoBehaviour
             supino.SetActive(false);
             lateral.SetActive(false);
             prono.SetActive(true);
-            npc.transform.SetParent(camilla.transform);
             TACManager.instance.setPacienteEnCamilla(true);
 
             if (tipoPosicion == PacienteManager.instance.getPosturaPaciente())
             {
                 TACManager.instance.setPostura(true);
+                prono.transform.SetParent(camilla.transform, true);
+                Debug.Log(" Perra :el padre del modelo es: " + prono.transform.parent);
             }
         }
         else if (tipoPosicion == "Lateral")
@@ -98,12 +101,13 @@ public class PosturaManager : MonoBehaviour
             supino.SetActive(false);
             prono.SetActive(false);
             lateral.SetActive(true);
-            npc.transform.SetParent(camilla.transform);
             TACManager.instance.setPacienteEnCamilla(true);
 
             if (tipoPosicion == PacienteManager.instance.getPosturaPaciente())
             {
                 TACManager.instance.setPostura(true);
+                lateral.transform.SetParent(camilla.transform, true);
+                
             }
 
         }

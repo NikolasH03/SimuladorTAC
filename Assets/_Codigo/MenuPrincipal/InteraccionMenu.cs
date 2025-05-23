@@ -27,6 +27,7 @@ public class InteraccionMenu : MonoBehaviour
     void SetEstaViendoObjeto(bool valor)
     {
         EstaViendoObjeto = valor;
+        ControladorSonido.instance.playAudio(ControladorSonido.instance.hover);
     }
 
     void OprimeBoton(InputAction.CallbackContext context)
@@ -42,10 +43,12 @@ public class InteraccionMenu : MonoBehaviour
                 //Debug.Log(" MiDebug : si oprimio boton");
                 if (tipoBoton == 1)
                 {
+                    ControladorSonido.instance.playAudio(ControladorSonido.instance.correcto);
                     ComenzarSimulacion();
                 }
                 else if(tipoBoton == 2)
                 {
+                    ControladorSonido.instance.playAudio(ControladorSonido.instance.incorrecto);
                     Salir();
                 }
             }

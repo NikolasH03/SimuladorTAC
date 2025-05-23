@@ -19,6 +19,8 @@ public class TACManager : MonoBehaviour
     [SerializeField] bool pacienteEnCamilla = false;
     [SerializeField] bool posturaCorrecta = false;
 
+
+
     private void Awake()
     {
         if (instance == null)
@@ -96,11 +98,14 @@ public class TACManager : MonoBehaviour
     {
         animator.speed = 0;
         laseres.SetActive(false);
+        
+
     }
     void Update()
     {
         //Debug.Log(" MiDebug : IsPlaying"+isPlaying);
         //Debug.Log(" MiDebug : Reanudar" + Reanudar);
+        
     }
 
     public void setPacienteEnCamilla(bool paciente)
@@ -111,4 +116,5 @@ public class TACManager : MonoBehaviour
     {
         posturaCorrecta = postura;
     }
+    
 }

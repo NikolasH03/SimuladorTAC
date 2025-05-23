@@ -40,7 +40,9 @@ public class BotonContinuar : MonoBehaviour
     {
         if (oprimioBoton) 
         {
+
             PantallaManager.instance.setContinuar(true);
+            oprimioBoton = false;
         }
     }
 }

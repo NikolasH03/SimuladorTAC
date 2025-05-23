@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,8 +13,8 @@ public class CampoInformacion : MonoBehaviour
 
     [SerializeField] int campoInformacion;
     [SerializeField] TextMeshProUGUI texto;
-    [SerializeField] int numeroCamposLlenos = 0;
 
+    private HashSet<int> camposYaLlenos = new HashSet<int>();
     void OnEnable()
     {
         BotonAccion.action.Enable();
@@ -46,31 +47,33 @@ public class CampoInformacion : MonoBehaviour
     {
         if (oprimioBoton)
         {
-
+            if (!camposYaLlenos.Contains(campoInformacion))
+            {
                 switch (campoInformacion)
                 {
                     case 1:
                         texto.text = PacienteManager.instance.getNombre();
-                        numeroCamposLlenos++;   
                         break;
                     case 2:
                         texto.text = PacienteManager.instance.getEdad();
-                        numeroCamposLlenos++; 
                         break;
                     case 3:
                         texto.text = PacienteManager.instance.getAltura();
-                        numeroCamposLlenos++; 
                         break;
                     case 4:
                         texto.text = PacienteManager.instance.getPeso();
-                        numeroCamposLlenos++; 
                         break;
-                } 
-        }
+                    default:
+                        Debug.LogWarning("Campo inválido: " + campoInformacion);
+                        break;
+                }
 
-        if (numeroCamposLlenos == 4)
-        {
-            PantallaManager.instance.setCamposLlenos(true);
-        }
+                camposYaLlenos.Add(campoInformacion);
+                PantallaManager.instance.llenarNumeroCampos();
+            }
+
+            oprimioBoton = false;
+        }    
+       
     }
 }

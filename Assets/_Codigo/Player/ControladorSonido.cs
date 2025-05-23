@@ -10,8 +10,10 @@ public class ControladorSonido : MonoBehaviour
 
     public AudioClip background;
     public AudioClip footsteps;
-    public AudioClip SonidoBoton;
-    public AudioClip SonidoTAC;
+    public AudioClip hover;
+    public AudioClip tac;
+    public AudioClip correcto;
+    public AudioClip incorrecto;
 
 
     public static ControladorSonido instance;
@@ -30,12 +32,12 @@ public class ControladorSonido : MonoBehaviour
 
 
     }
-    private void Start()
-    {
-        musicSource.clip = background;
-        musicSource.Play();
+    //private void Start()
+    //{
+    //    musicSource.clip = background;
+    //    musicSource.Play();
 
-    }
+    //}
     public void playAudio(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);

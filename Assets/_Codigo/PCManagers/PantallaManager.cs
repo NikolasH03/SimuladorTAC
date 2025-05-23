@@ -8,15 +8,17 @@ public class PantallaManager : MonoBehaviour
 {
     public static PantallaManager instance;
 
-    [SerializeField] int numeroPantalla = 1;
+    [SerializeField] int numeroPantalla = 0;
+    [SerializeField] GameObject Pantalla0;
     [SerializeField] GameObject Pantalla1;
     [SerializeField] GameObject Pantalla2;
     [SerializeField] GameObject Pantalla3;
     [SerializeField] bool Continuar = false;
     [SerializeField] bool PosturaCorrecta = false;
-    [SerializeField] bool TodosCamposLlenos = false;
     [SerializeField] bool RegionAnatomicaCorrecta = false;
     [SerializeField] bool TipoExamenCorrecto = false;
+    [SerializeField] int numeroCamposLlenos = 0;
+    //[SerializeField] List<TextMeshProUGUI> BotonesExamenes;
     [SerializeField] List<string> nombresExamenesCabeza = NombresEnum.GetAllInspectorNames<ExamenesCabeza>();
     [SerializeField] List<string> nombresExamenesTorax = NombresEnum.GetAllInspectorNames<ExamenesTorax>();
     [SerializeField] List<string> nombresExamenesPelvis = NombresEnum.GetAllInspectorNames<ExamenesPelvis>();
@@ -42,20 +44,32 @@ public class PantallaManager : MonoBehaviour
         {
             switch (numeroPantalla)
             {
+                case 0:
+                    if (LaserManager.instance.getPacienteEnLaser())
+                    {
+                        numeroPantalla++;
+                        Pantalla0.SetActive(false);
+                        Pantalla1.SetActive(true);
+                        Continuar = false;
+                    }
+                    break;
                 case 1:
-                    if (PosturaCorrecta && TodosCamposLlenos)
+                    if (PosturaCorrecta && numeroCamposLlenos == 4)
                     {
                         numeroPantalla++;
                         Pantalla1.SetActive(false);
                         Pantalla2.SetActive(true);
+                        Continuar = false;
                     }
-                    else if(!TodosCamposLlenos)
+                    else if(numeroCamposLlenos < 4)
                     {
                         Debug.Log(" Perra :faltan campos por llenar");
+                        Continuar = false;
                     }
                     else if (!PosturaCorrecta)
                     {
                         Debug.Log(" Perra :La postura digitada no es la correcta");
+                        Continuar = false;
                     }
                     break;
 
@@ -65,13 +79,61 @@ public class PantallaManager : MonoBehaviour
                         numeroPantalla++;
                         Pantalla2.SetActive(false);
                         Pantalla3.SetActive(true);
+                        Continuar = false;
+                    }
+                    else if(!RegionAnatomicaCorrecta)
+                    {
+                        Debug.Log(" Perra :region anatomica incorrecta");
+                        Continuar = false;
+                    }
+                    else if (!TipoExamenCorrecto)
+                    {
+                        Debug.Log(" Perra :tipo de examen incorrecto");
+                        Continuar = false;
                     }
                     break;
             }
-            Continuar = false;
+           
+            
         }
 
     }
+    //public void ActualizarExamenesDisponibles(string region)
+    //{
+    //    if (region == "Cabeza")
+    //    {
+    //        List<string> nombres = getListaExamenes("Cabeza");
+
+    //        for (int i = 0; i < BotonesExamenes.Count; i++)
+    //        {
+
+    //            BotonesExamenes[i].text = nombres[i];
+
+    //        }
+    //    }
+    //    if (region == "Torax")
+    //    {
+    //        List<string> nombres = getListaExamenes("Torax");
+
+    //        for (int i = 0; i < BotonesExamenes.Count; i++)
+    //        {
+
+    //            BotonesExamenes[i].text = nombres[i];
+
+    //        }
+    //    }
+    //    if (region == "Pelvis")
+    //    {
+    //        List<string> nombres = getListaExamenes("Pelvis");
+
+    //        for (int i = 0; i < BotonesExamenes.Count; i++)
+    //        {
+
+    //            BotonesExamenes[i].text = nombres[i];
+
+    //        }
+    //    }
+    //}
 
     public void setPosturaCorrecta(bool postura)
     {
@@ -84,10 +146,6 @@ public class PantallaManager : MonoBehaviour
     public void setExamen(bool region)
     {
         TipoExamenCorrecto = region;
-    }
-    public void setCamposLlenos(bool campos)
-    {
-        TodosCamposLlenos = campos;
     }
     public void setContinuar(bool continuar)
     {
@@ -108,5 +166,9 @@ public class PantallaManager : MonoBehaviour
             return nombresExamenesPelvis;
         }
         return null;
+    }
+    public void llenarNumeroCampos()
+    {
+        numeroCamposLlenos++;
     }
 }
