@@ -15,8 +15,6 @@ public class PosturaManager : MonoBehaviour
     [SerializeField] GameObject supino;
     [SerializeField] GameObject prono;
 
-    [SerializeField] GameObject camilla;
-
     [SerializeField] string tipoPosicion;
     
 
@@ -82,7 +80,6 @@ public class PosturaManager : MonoBehaviour
             {
                 ControladorSonido.instance.playAudio(ControladorSonido.instance.correcto);
                 TACManager.instance.setPostura(true);
-                supino.transform.SetParent(camilla.transform, true);
             }
         }
         else if (tipoPosicion == "Prono")
@@ -97,7 +94,6 @@ public class PosturaManager : MonoBehaviour
             {
                 ControladorSonido.instance.playAudio(ControladorSonido.instance.correcto);
                 TACManager.instance.setPostura(true);
-                prono.transform.SetParent(camilla.transform, true);
             }
         }
         else if (tipoPosicion == "Lateral")
@@ -112,7 +108,6 @@ public class PosturaManager : MonoBehaviour
             {
                 ControladorSonido.instance.playAudio(ControladorSonido.instance.correcto);
                 TACManager.instance.setPostura(true);
-                lateral.transform.SetParent(camilla.transform, true);
                 
             }
 

@@ -225,6 +225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &25257014
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -245,7 +250,7 @@ GameObject:
   - component: {fileID: 29991968}
   - component: {fileID: 29991967}
   m_Layer: 5
-  m_Name: BackgroudAltura
+  m_Name: BackgroudExamen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -533,6 +538,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1309379f87be55941b50d8b636e12673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  imagen: {fileID: 0}
 --- !u!222 &49049499
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -871,7 +880,8 @@ MonoBehaviour:
   m_text: 'Cabeza :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
-  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
+  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1093,6 +1103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1309379f87be55941b50d8b636e12673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  imagen: {fileID: 0}
 --- !u!222 &79153042
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1872,6 +1886,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &152777320
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2253,6 +2272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &233293772
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2543,7 +2567,7 @@ GameObject:
   - component: {fileID: 244797768}
   - component: {fileID: 244797767}
   m_Layer: 3
-  m_Name: CampoAltura
+  m_Name: CampoExamen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2632,6 +2656,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &244797770
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2834,7 +2863,8 @@ MonoBehaviour:
   m_text: "Regi\xF3n anat\xF3mica\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
-  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
+  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3873,6 +3903,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &499351463
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4178,7 +4213,7 @@ GameObject:
   - component: {fileID: 592659685}
   - component: {fileID: 592659684}
   m_Layer: 5
-  m_Name: BackgroudContraste
+  m_Name: BackgroudPosicion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4346,6 +4381,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &596281373
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4457,6 +4497,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &607974610
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4720,6 +4765,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &641234020
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5140,7 +5190,8 @@ MonoBehaviour:
   m_text: Examen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
-  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
+  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6079,7 +6130,8 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
-  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
+  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6213,7 +6265,8 @@ MonoBehaviour:
   m_text: 'Ficha Paciente '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
-  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
+  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7270,7 +7323,6 @@ GameObject:
   - component: {fileID: 928971391}
   - component: {fileID: 928971390}
   - component: {fileID: 928971389}
-  - component: {fileID: 928971388}
   m_Layer: 5
   m_Name: CanvasPaciente
   m_TagString: Untagged
@@ -7278,18 +7330,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &928971388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 928971387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27b63c426e838534298573ec72f2c1db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &928971389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7758,6 +7798,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &995584486
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8548,6 +8593,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &1181602346
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8870,6 +8920,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &1227136249
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9092,7 +9147,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Diagnostico :
+  m_text: 'Examen :
 
 '
   m_isRightToLeft: 0
@@ -9708,7 +9763,8 @@ MonoBehaviour:
   m_text: 'D. Personales '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
-  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
+  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10053,7 +10109,8 @@ MonoBehaviour:
   m_text: 'Contraste :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
-  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
+  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10275,6 +10332,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1309379f87be55941b50d8b636e12673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  imagen: {fileID: 0}
 --- !u!222 &1535181116
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10343,7 +10404,8 @@ MonoBehaviour:
   m_text: "Nombre : \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
-  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
+  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10520,6 +10582,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &1541552265
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10631,6 +10698,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &1558277055
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10699,7 +10771,8 @@ MonoBehaviour:
   m_text: 'Torax : '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
-  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
+  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10833,7 +10906,8 @@ MonoBehaviour:
   m_text: 'Altura :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
-  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
+  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10967,7 +11041,8 @@ MonoBehaviour:
   m_text: 'Peso :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
-  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
+  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11235,7 +11310,8 @@ MonoBehaviour:
   m_text: "Diagnostico : \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
-  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
+  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11530,6 +11606,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &1686377187
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12028,7 +12109,8 @@ MonoBehaviour:
   m_text: 'Edad :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
-  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26, type: 2}
+  m_sharedMaterial: {fileID: 1585357106310518271, guid: f94a93e4fb8dc4e4ba821d403cf40e26,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12687,7 +12769,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Contraste :
+  m_text: 'Posicion :
 
 '
   m_isRightToLeft: 0
@@ -12901,7 +12983,7 @@ GameObject:
   - component: {fileID: 1901066988}
   - component: {fileID: 1901066987}
   m_Layer: 3
-  m_Name: CampoContraste
+  m_Name: CampoPosicion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12990,6 +13072,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37ff39893c5544ba69251f83b94bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonAccion: {fileID: 0}
+  oprimioBoton: 0
+  EstaViendoObjeto: 0
+  campoInformacion: 0
+  texto: {fileID: 0}
 --- !u!222 &1901066990
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14014,6 +14101,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b63c426e838534298573ec72f2c1db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numeroPantalla: 0
+  Pantalla0: {fileID: 0}
+  Pantalla1: {fileID: 0}
+  Pantalla2: {fileID: 0}
+  Pantalla3: {fileID: 0}
+  Continuar: 0
+  PosturaCorrecta: 0
+  RegionAnatomicaCorrecta: 0
+  TipoExamenCorrecto: 0
+  numeroCamposLlenos: 0
+  nombresExamenesCabeza:
+  - TAC cerebral
+  - TAC de senos paranasales
+  - "TAC de \xF3rbitas"
+  - TAC de macizo facial
+  nombresExamenesTorax:
+  - "TAC de t\xF3rax simple"
+  - "TAC de t\xF3rax de alta resolucion"
+  - "AngioTAC de t\xF3rax"
+  nombresExamenesPelvis:
+  - "TAC de pelvis \xF3sea"
+  - "TAC ginecol\xF3gica"
+  - "TAC prost\xE1tica"
 --- !u!114 &2094424143
 MonoBehaviour:
   m_ObjectHideFlags: 0

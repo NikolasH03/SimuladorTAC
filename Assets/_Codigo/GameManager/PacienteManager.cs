@@ -9,7 +9,7 @@ public class PacienteManager : MonoBehaviour
 
     [SerializeField] private List<DataPaciente> pacientes;
     [SerializeField] private DataPaciente pacienteActual;
-    [SerializeField] TextMeshProUGUI textoTipoPostura;
+    //[SerializeField] TextMeshProUGUI textoTipoPostura;
     private void Awake()
     {
         if (instance == null)
@@ -20,16 +20,13 @@ public class PacienteManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    void Start()
-    {
         pacienteActual = pacientes[Random.Range(0, pacientes.Count)];
     }
 
-    void Update()
-    {
-        textoTipoPostura.text = pacienteActual.postura.ToString();
-    }
+    //void Update()
+    //{
+    //    textoTipoPostura.text = pacienteActual.postura.ToString();
+    //}
 
     public string getPosturaPaciente()
     {

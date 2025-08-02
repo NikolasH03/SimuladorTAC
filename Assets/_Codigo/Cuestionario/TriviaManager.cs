@@ -16,6 +16,7 @@ public class TriviaManager : MonoBehaviour
     [SerializeField] List<PreguntaTrivia> preguntas;
     [SerializeField] GameObject correcto;
     [SerializeField] GameObject incorrecto;
+    [SerializeField] GameObject finalizar;
 
     private int preguntaActual = 0;
     public int respuestasCorrectas = 0;
@@ -53,27 +54,26 @@ public class TriviaManager : MonoBehaviour
         pregunta.canvasPregunta.SetActive(false);
 
         // Pasa a la siguiente después de un momento
-        //StartCoroutine(SiguientePreguntaConRetraso(1.5f));
+        StartCoroutine(SiguientePreguntaConRetraso(1.5f));
     }
 
-    //IEnumerator SiguientePreguntaConRetraso(float delay)
-    //{
-    //    yield return new WaitForSeconds(delay);
+    IEnumerator SiguientePreguntaConRetraso(float delay)
+    {
+        yield return new WaitForSeconds(delay);
 
-    //    correcto.SetActive(false);
-    //    incorrecto.SetActive(false);
+        correcto.SetActive(false);
+        incorrecto.SetActive(false);
 
-    //    preguntaActual++;
-    //    if (preguntaActual < preguntas.Count)
-    //    {
-    //        ActivarPregunta(preguntaActual);
-    //    }
-    //    else
-    //    {
-    //        Debug.Log(" MiDebug Trivia terminada.");
-    //        // Aquí podrías mostrar un resumen o terminar la escena
-    //    }
-    //}
+        preguntaActual++;
+        if (preguntaActual < preguntas.Count)
+        {
+            ActivarPregunta(preguntaActual);
+        }
+        else
+        {
+            finalizar.SetActive(true);
+        }
+    }
 
     private void ActivarPregunta(int indice)
     {

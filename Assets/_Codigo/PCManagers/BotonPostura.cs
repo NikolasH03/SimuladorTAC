@@ -62,7 +62,7 @@ public class BotonPostura : BotonSeleccionableBase
         if (oprimioBoton)
         {
             Color nuevoColor;
-            if (ColorUtility.TryParseHtmlString("#FF8800", out nuevoColor))
+            if (ColorUtility.TryParseHtmlString("#FEF4A7", out nuevoColor))
             {
                 imagen.color = nuevoColor;
             }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 using TMPro;
 public class PantallaManager : MonoBehaviour
 {
@@ -85,6 +85,12 @@ public class PantallaManager : MonoBehaviour
                         Debug.Log(" Perra :tipo de examen incorrecto");
                         Continuar = false;
                     }
+                    break;
+                case 3:
+                    Continuar = false;
+                    numeroPantalla++;
+                    SceneManager.LoadScene("Cuestionario");
+                    
                     break;
             }
            

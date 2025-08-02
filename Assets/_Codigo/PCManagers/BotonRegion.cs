@@ -63,20 +63,17 @@ public class BotonRegion : BotonSeleccionableBase
     {
         if (oprimioBoton)
         {
-            Color nuevoColor;
-            if (ColorUtility.TryParseHtmlString("#FF8800", out nuevoColor))
-            {
-                imagen.color = nuevoColor;
-            }
+    
+            Color colorActual = imagen.color;
+            colorActual.a = 0.5f; 
+            imagen.color = colorActual;
 
         }
         if (!oprimioBoton)
         {
-            Color nuevoColor;
-            if (ColorUtility.TryParseHtmlString("#FFFFFF", out nuevoColor))
-            {
-                imagen.color = nuevoColor;
-            }
+            Color colorActual = imagen.color;
+            colorActual.a = 0f;
+            imagen.color = colorActual;
 
         }
 

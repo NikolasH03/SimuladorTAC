@@ -57,7 +57,7 @@ public class BotonExamen : BotonSeleccionableBase
         if (oprimioBoton)
         {
             Color nuevoColor;
-            if (ColorUtility.TryParseHtmlString("#FF8800", out nuevoColor))
+            if (ColorUtility.TryParseHtmlString("#FFFFFF", out nuevoColor))
             {
                 imagen.color = nuevoColor;
             }
@@ -66,7 +66,7 @@ public class BotonExamen : BotonSeleccionableBase
         if (!oprimioBoton)
         {
             Color nuevoColor;
-            if (ColorUtility.TryParseHtmlString("#FFFFFF", out nuevoColor))
+            if (ColorUtility.TryParseHtmlString("#001D3D", out nuevoColor))
             {
                 imagen.color = nuevoColor;
             }
