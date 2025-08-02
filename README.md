@@ -12,7 +12,7 @@
 
 ---
 
-## Your Contribution 
+## My Contribution 
 - Core programming and feature integration.
 - Implemented gameplay logic for patient positioning, scan parameter handling, and questionnaire flow.
 - Integrated existing 3D models and UI elements created by the design team.
@@ -20,7 +20,7 @@
 ---
 
 ## Screenshots / GIFs 
-![VR TAC](Docs/vr_tac_simulator.gif)
+![VR TAC](simuladorTAC.gif)
 
 ---
 
