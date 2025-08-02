@@ -20,7 +20,7 @@
 ---
 
 ## Screenshots / GIFs 
-![VR TAC](simuladorTAC.gif)
+![VR TAC](Docs/simuladorTAC.gif)
 
 ---
 
